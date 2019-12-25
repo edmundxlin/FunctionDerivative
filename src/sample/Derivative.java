@@ -21,7 +21,14 @@ public class Derivative {
         return expression;
 
     }
-    public ArrayList<String> derive(ArrayList<String> exp){
+    public String concat(ArrayList<String> exp){
+        String ex ="";
+        for(int i=0;i<exp.size();i++){
+            ex += exp.get(i);
+        }
+        return ex;
+    }
+    public String derive(ArrayList<String> exp){
         ArrayList<String> expression = exp;
         for(int i=0; i<expression.size();i++){
             if(expression.get(i)!="+"){
@@ -37,9 +44,8 @@ public class Derivative {
                 }
             }
         }
-        return expression;
+        String finalEx = concat(expression);
+        return finalEx;
     }
-    public String concat(ArrayList<String>exp){
-        
-    }
+
 }
