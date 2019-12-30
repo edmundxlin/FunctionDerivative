@@ -36,7 +36,8 @@ public class Main extends Application {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                text.setText(expressed.takeIn(userIn.getText()));
+                text.setText(expressed.derive(expressed.takeIn(userIn.getText())));
+                System.out.println(expressed.derive(expressed.takeIn(userIn.getText())));
                 text.setLayoutX(100);
                 text.setLayoutY(100);
             }
